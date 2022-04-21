@@ -27,5 +27,13 @@ const getData = () => [
     { imgSrc: ".assets/images/thor.png", name: "thor" },
 ];
 
-// Randomise all of the cards so the game can function properly
 
+// Randomize all of the cards so the game can function properly
+
+const randomize = () => {
+    const cardData = getData()
+    cardData.sort(() => Math.random() - 0.5);
+    console.log(cardData)
+};
+
+randomize();
