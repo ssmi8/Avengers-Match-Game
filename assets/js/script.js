@@ -40,15 +40,20 @@ const randomize = () => {
 const cardGenerator = () => {
     const cardData = randomize();
     cardData.forEach(item => {
-        console.log(item);
-    })
     const card = document.createElement ("div");
     const face = document.createElement ("img");
-    const back = doument.createElement ("img");
+    const back = document.createElement ("img");
     card.classList = 'card';
     face.classList = 'face';
     back.classList = 'back';
-
-}
+    //Image to card on html
+    face.src = item.imgSrc;
+    //Attach card to the section in html
+    section.appendChild(card);
+    card.appendChild(face);
+    card.appendChild(back);
+    });
+};
+   
 
 cardGenerator();
