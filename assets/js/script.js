@@ -33,7 +33,13 @@ const getData = () => [
 const randomize = () => {
     const cardData = getData()
     cardData.sort(() => Math.random() - 0.5);
-    console.log(cardData)
+   
 };
 
-randomize();
+// Function to generate cards into html page
+const cardGenerator = () => {
+    const cardData = randomize();
+    console.log(cardData)
+}
+
+cardGenerator();
