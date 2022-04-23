@@ -39,9 +39,16 @@ const randomize = () => {
 // Function to generate cards into html page
 const cardGenerator = () => {
     const cardData = randomize();
+    cardData.forEach(item => {
+        console.log(item);
+    })
     const card = document.createElement ("div");
     const face = document.createELement ("img");
     const back = doument.createElement ("img");
+    card.classList = 'card';
+    face.classList = 'face';
+    back.classList = 'back';
+
 }
 
 cardGenerator();
