@@ -43,7 +43,7 @@ const cardGenerator = () => {
         console.log(item);
     })
     const card = document.createElement ("div");
-    const face = document.createELement ("img");
+    const face = document.createElement ("img");
     const back = doument.createElement ("img");
     card.classList = 'card';
     face.classList = 'face';
