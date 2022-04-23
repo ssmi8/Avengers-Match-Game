@@ -15,7 +15,7 @@ const getData = () => [
     { imgSrc: "assets/images/hulk.png", name: "hulk" },
     { imgSrc: "assets/images/iron_man.jpg", name: "iron man" },
     { imgSrc: "assets/images/scarlet_witch.png", name: "scarlet witch" },
-    { imgSrc: "assets/images/spider_man.jpg", name: "spider man" },
+    { imgSrc: "assets/images/spider-man.jpg", name: "spider man" },
     { imgSrc: "assets/images/thor.png", name: "thor" },
     { imgSrc: "assets/images/black_panther.png", name: "black panther" },
     { imgSrc: "assets/images/captain_america.png", name: "captain america" },
@@ -23,7 +23,7 @@ const getData = () => [
     { imgSrc: "assets/images/hulk.png", name: "hulk" },
     { imgSrc: "assets/images/iron_man.jpg", name: "iron man" },
     { imgSrc: "assets/images/scarlet_witch.png", name: "scarlet witch" },
-    { imgSrc: "assets/images/spider_man.jpg", name: "spider man" },
+    { imgSrc: "assets/images/spider-man.jpg", name: "spider man" },
     { imgSrc: "assets/images/thor.png", name: "thor" },
 ];
 
