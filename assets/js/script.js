@@ -48,6 +48,7 @@ const cardGenerator = () => {
     back.classList = 'back';
     //Image to card on html
     face.src = item.imgSrc;
+    card.setAttribute("name", item.name);
     //Attach card to the section in html
     section.appendChild(card);
     card.appendChild(face);
@@ -55,9 +56,16 @@ const cardGenerator = () => {
 
     card.addEventListener('click', (e) => {
         card.classList.toggle('commandCard');
+        cardCheck(e);
     })
     });
 };
-   
+
+// Function to check if card match
+const cardCheck = (e) => {
+    console.log(e);
+    const activeCard = e.target;
+    console.log(activeCard);
+};
 
 cardGenerator();
