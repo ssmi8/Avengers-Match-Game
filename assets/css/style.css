@@ -25,10 +25,29 @@ h1, h2, h3 {
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    grid-gap: 2rem;
+    perspective: 800px;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s ease;
+    transform: rotateY(0deg);
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px; /*Black shadow at bottom of each card with blur */ 
 }
 
 .face,.back {
     width: 100%;
     height: 100%;
+    position: absolute;
+}
 
+.back {
+    background: grey;
+    backface-visibility: hidden;
+}
+
+.commandCard {
+    transform: rotateY(180deg);
 }
