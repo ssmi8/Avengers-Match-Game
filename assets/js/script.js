@@ -83,6 +83,9 @@ if (turnedCards.length === 2) {
             card.classList.remove("turned");
             setTimeout(() => card.classList.remove("commandCard"), 1500); //delay command to ensure second card can be clicked before first card turns
         });
+        
+        playerLives--;
+        playerLivesCount.textContent = playerLives;
     }
 }
 };
