@@ -77,7 +77,7 @@ if (turnedCards.length === 2) {
         console.log("wrong");
         turnedCards.forEach((card) => {
             card.classList.remove("turned");
-            card.classList.remove("commandCard");
+            setTimeout(() => card.classList.remove("commandCard"), 1500); //delay command to ensure second card can be clicked before first card turns
         });
     }
 }
