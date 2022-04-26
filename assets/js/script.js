@@ -65,7 +65,20 @@ const cardGenerator = () => {
 const cardCheck = (e) => {
     console.log(e);
     const activeCard = e.target;
-    console.log(activeCard);
+    activeCard.classList.add("turned");
+    const turnedCards = document.querySelectorAll('.turned');
+    console.log(turnedCards);
+    // Matching logic
+   if (turnedCards.length === 2) {
+    if (
+        turnedCards[0].getAttribute("name") ===
+        turnedCards[1].getAttribute("name")
+    ) {
+        console.log("match");
+    } else {
+        console.log("incorrect");
+    }
+   }
 };
 
 cardGenerator();
