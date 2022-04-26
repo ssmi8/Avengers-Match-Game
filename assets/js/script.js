@@ -73,6 +73,10 @@ if (turnedCards.length === 2) {
     if (turnedCards[0].getAttribute("name") === turnedCards[1].getAttribute("name")
     ) {
         console.log("match");
+        turnedCards.forEach((card) => {
+            card.classList.remove("turned");
+            card.style.pointerEvents = "none";
+        });
     } else {
         console.log("wrong");
         turnedCards.forEach((card) => {
