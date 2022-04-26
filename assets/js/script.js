@@ -69,16 +69,18 @@ const cardCheck = (e) => {
     const turnedCards = document.querySelectorAll('.turned');
     console.log(turnedCards);
     // Matching logic
-   if (turnedCards.length === 2) {
-    if (
-        turnedCards[0].getAttribute("name") ===
-        turnedCards[1].getAttribute("name")
+if (turnedCards.length === 2) {
+    if (turnedCards[0].getAttribute("name") === turnedCards[1].getAttribute("name")
     ) {
         console.log("match");
     } else {
-        console.log("incorrect");
+        console.log("wrong");
+        turnedCards.forEach((card) => {
+            card.classList.remove("turned");
+            card.classList.remove("commandCard");
+        });
     }
-   }
+}
 };
 
 cardGenerator();
