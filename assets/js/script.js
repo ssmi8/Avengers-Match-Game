@@ -86,8 +86,23 @@ if (turnedCards.length === 2) {
         
         playerLives--;
         playerLivesCount.textContent = playerLives;
+        if (playerLives === 0) {
+            restart();
+        }
     }
 }
 };
+
+// function for the restart of the game
+const restart = () => {
+    let cardData = randomize();
+    let face = document.querySelectorAll(".face");
+    let card = document.querySelectorAll(".card");
+    cardData.forEach((item, index) => {
+        card[index].classList.remove("commandCard");
+    });
+};
+
+
 
 cardGenerator();
