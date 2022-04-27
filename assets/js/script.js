@@ -100,8 +100,14 @@ const restart = () => {
     let card = document.querySelectorAll(".card");
     cardData.forEach((item, index) => {
         card[index].classList.remove("commandCard");
-        card[index].style.pointerEvents = "all";
-        face[index].src = item.imgSrc;
+
+        setTimeout(() => {
+            card[index].style.pointerEvents = "all";
+            face[index].src = item.imgSrc;
+            card[index].setAttribute("name", item.name);
+        }, 1000);
+
+
     });
     playerLives = 5;
     playerLivesCount.textContent = playerLives;

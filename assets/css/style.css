@@ -49,6 +49,10 @@ h1, h2, h3 {
     backface-visibility: hidden;
 }
 
+.face {
+    transform: rotateY(180deg);
+}
+
 .commandCard {
     transform: rotateY(180deg);
 }
