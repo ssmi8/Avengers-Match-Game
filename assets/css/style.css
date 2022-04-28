@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Anton',  sans-serif;
 }
 
 body {
@@ -56,3 +59,22 @@ h1, h2, h3 {
 .commandCard {
     transform: rotateY(180deg);
 }
+
+/* button styling */
+.button{
+    border: 2px solid rgb(105, 102, 102);
+    padding: 3px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background:rgb(47, 75, 231); 
+    min-width: 80px;
+    margin: 5px;    
+}
+
+.button:hover{
+    background: rgb(68, 66, 66);
+    text-decoration: none;
+}
+
+
