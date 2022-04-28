@@ -9,17 +9,49 @@
 
 body {
     height: 100vh;
+    background-image: url(/assets/images/background.png);
     
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 /** styling for the logo in the header **/
 
-h1, h2, h3 {
+.logo, .tagLine {
+    color: whitesmoke;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    font-size: 50px;
+}
+
+.tagLine {
+    font-size: 30px;
+}
+
+/* score box styling */
+
+#playerLivesCount {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-content: center ;
+    border: 3px solid purple;   
+    border-radius: 10px;    
+    height: 80px;
+    width: 50px;
+    background: #ffff;
     
 }
+
+    
+    
+
 
 .grid {
     display: grid;
@@ -48,7 +80,7 @@ h1, h2, h3 {
 }
 
 .back {
-    background: grey;
+    background: rgb(104, 6, 104);
     backface-visibility: hidden;
 }
 
@@ -60,17 +92,8 @@ h1, h2, h3 {
     transform: rotateY(180deg);
 }
 
-/* button styling */
-.button{
-    border: 2px solid rgb(105, 102, 102);
-    padding: 3px;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    background:rgb(47, 75, 231); 
-    min-width: 80px;
-    margin: 5px;    
-}
+
+
 
 .button:hover{
     background: rgb(68, 66, 66);
