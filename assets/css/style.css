@@ -40,23 +40,19 @@ body {
 #playerLivesCount {
     display: flex;
     justify-content: center;
-    align-content: center ;
+    align-content: center;
     border: 3px solid purple;   
     border-radius: 10px;    
-    height: 80px;
-    width: 50px;
+    height: 50px;
+    width: 80px;
     background: #ffff;
     
 }
 
-    
-    
-
-
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 10rem);
-    grid-template-rows: repeat(4, 10rem);
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(4, 8rem);
     justify-content: center;
     align-content: center;
     flex-direction: column;
@@ -93,11 +89,16 @@ body {
 }
 
 
-
-
-.button:hover{
+.button:hover {
     background: rgb(68, 66, 66);
     text-decoration: none;
+}
+
+#reset {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
 }
 
 
