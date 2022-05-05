@@ -3,6 +3,11 @@ const section = document.querySelector('section');
 const playerLivesCount = document.querySelector('span');
 let playerLives  = 5;
 
+// Audio
+let startSound = new Audio('./assets/audio/assemble.mp3');
+let loseSound = new Audio('./assets/audio/inevitable.mp3');
+let winSound = new Audio('./assets/audio/tune.mp3');
+
 //Link 
 playerLivesCount.textContent = playerLives;
 
