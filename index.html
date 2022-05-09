@@ -10,32 +10,44 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header Section to outline the Game title and catchphrase -->
+    <!-- Header Section to outline the Game title and catchphrase and difficulty levels -->
 <section class="filler">
     <section class="header">
         <h1 class="logo">Marvel Avengers Match</h1>
+        <h2 class="tagLine">Avengers...Assemble!</h2>
     </section>
+    <!-- This is the section for the difficulty level buttons -->
     <section class="difficulty">
         <button data-type="submit" class="easy">Easy</button>
         <button data-type="submit" class="medium">Medium</button>
         <button data-type="submit" class="hard">Hard</button>
     </section>
-   
-    <h2 class="tagLine">Avengers...Assemble!</h2>
+    <!-- Game to start on easy -->
+    <section class="game-easy"></section>
+
+     <!-- This is the section for the number of moves left -->
+    <section>
+        <p class="moves">Number of moves left: <span id="score">5</span></p>
+    </section>
     
-    <div>
-        <h1 class="tagLine">Score:<span></span> </h1>
-    </div>
+    <!-- Message board - Outlines message for wins and losses - hidden until game ends -->
+    <section class="result">
+        <div class="result-message" class="result-message-hidden">
+            <div class="score-wrapper"> Congratulations! You completed the memory game in <span id="score">0</span>moves<br>
+            Your best score for <span id="difficulty-text">Easy</span> is <span id="previous-score"></span>
+            </div>
+            <button data-type="submit" class="restart">Play Again?</button>
+        </div>
+    </section>
 </section>
 
     <!-- Game Area-->
         
     <section class="grid"></section>
 
-    <div>
-        <button id="reset" class="tagLine">Restart</button>
-    </div>            
-<footer></footer>    
-    <script src="assets/js/script.js"></script>
+            
+<footer class="footer">Copyright © Steven Smith 2022</footer>
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>
