@@ -1,16 +1,63 @@
 
-const section = document.querySelector('section');
-const playerLivesCount = document.querySelector('span');
-let playerLives  = 5;
+document.addEventListener("DOMContentLoaded", function () {
+    rerarrangeCards();
+    cardGenerator();
+})
 
 // Audio
 let startSound = new Audio('./assets/audio/assemble.mp3');
 let loseSound = new Audio('./assets/audio/inevitable.mp3');
 let winSound = new Audio('./assets/audio/tune.mp3');
 
-//Link 
-playerLivesCount.textContent = playerLives;
+var easy = true;
+var medium = true;
+var hard = true;
+var easyScore = 100;
+var mediumScore = 100;
+var hardScore = 100;
 
+let hiddenScore = 0;
+
+
+let easyButton = document.getElementsByClassName("easy");
+easyButton[0].addEventListener("click", () => {
+    easy = true;
+    medium = false;
+    hard = false;
+    gameType = document.getElementsByClassName("game");
+    gameType[0].classList.add("easyLevel");
+    gameType[0].classList.remove("mediumLevel");
+    gameType[0].classList.remove("hardLevel");
+    levelSelect();
+    hiddenScore = 0;
+    document.getElementById("difficulty-text").innerText = "Easy";
+});
+let mediumButton = document.getElementsByClassName("medium");
+easyButton[0].addEventListener("click", () => {
+    easy = false;
+    medium = true;
+    hard = false;
+    gameType = document.getElementsByClassName("game");
+    gameType[0].classList.remove("easyLevel");
+    gameType[0].classList.add("mediumLevel");
+    gameType[0].classList.remove("hardLevel");
+    levelSelect();
+    hiddenScore = 0;
+    document.getElementById("difficulty-text").innerText = "Medium";
+});
+let hardButton = document.getElementsByClassName("hard");
+easyButton[0].addEventListener("click", () => {
+    easy = false;
+    medium = false;
+    hard = true;
+    gameType = document.getElementsByClassName("game");
+    gameType[0].classList.remove("easyLevel");
+    gameType[0].classList.remove("mediumLevel");
+    gameType[0].classList.add("hardLevel");
+    levelSelect();
+    hiddenScore = 0;
+    document.getElementById("difficulty-text").innerText = "Hard";
+});
 
 // Generate card data for the game to work
 

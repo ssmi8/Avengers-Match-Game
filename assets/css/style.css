@@ -7,8 +7,11 @@
     font-family: 'Anton',  sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
-    height: 100vh;
     background-image: url(/assets/images/background.png);
     
     /* Center and scale the image nicely */
@@ -19,6 +22,10 @@ body {
 }
 
 /** styling for the logo in the header **/
+
+.header {
+    margin: 0.5em;
+}
 
 .logo, .tagLine {
     color: whitesmoke;
@@ -36,12 +43,58 @@ body {
     font-size: 30px;
 }
 
+.difficulty {
+    margin: auto;
+    width: fit-content;
+}
+
+button {
+    display: inline-block;
+    padding: 0 16px 5px;
+    margin: 0 2.5px;
+    border: 2.5px solid grey;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    color: purple;
+    background-color: whitesmoke;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: larger;
+}
+
+button:hover {
+    background-color: darkgray;
+}
+
 /* grid box styling */
 
-.grid {
+.easyLevel {
     display: grid;
     grid-template-columns: repeat(4, 8rem);
     grid-template-rows: repeat(4, 8rem);
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    grid-gap: 2rem;
+    perspective: 800px;
+}
+
+
+.mediumLevel {
+    display: grid;
+    grid-template-columns: repeat(6, 8rem);
+    grid-template-rows: repeat(6, 8rem);
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    grid-gap: 2rem;
+    perspective: 800px;
+}
+
+.hardLevel {
+    display: grid;
+    grid-template-columns: repeat(6, 8rem);
+    grid-template-rows: repeat(6, 8rem);
     justify-content: center;
     align-content: center;
     flex-direction: column;
@@ -55,6 +108,21 @@ body {
     transition: all 2s ease;
     transform: rotateY(0deg);
     box-shadow: rgb(139, 136, 136) 0px 5px 15px; /*Black shadow at bottom of each card with blur */ 
+}
+
+.easyLevel>.card {
+    height: 9.375em;
+    width: 9.375em;
+}
+
+.mediumLevel>.card {
+    height: 6.25em;
+    width: 6.25em;
+}
+
+.hardLevel>.card {
+    height: 6.25em;
+    width: 6.25em;
 }
 
 .face,.back {
@@ -83,9 +151,15 @@ body {
     text-decoration: none;
 }
 
-#reset {
-    color: black;
+.filler {
+    min-height: calc(100vh - 7.5em);
+}
+
+.footer {
+    color: #FFFFFF;
     width: 100%;
+    text-align: center;
+    margin-top: 0.625em;
 }
 
 
