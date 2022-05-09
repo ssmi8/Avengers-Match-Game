@@ -97,15 +97,26 @@ const getData = () => [
 ];
 
 
-// Randomize all of the cards so the game can function properly
+// Randomize all of the cards for each difficulty level
 
 const randomize = () => {
-    const cardData = getData()
-    cardData.sort(() => Math.random() - 0.5);
-   return cardData;
+    if (easy === true) {
+        let arrayOrder = getData.slice (0, 16);
+        arrayOrder.sort(() => Math.random() - 0.5);
+        return arrayOrder;
+    } else if (medium === true) {
+        let arrayOrder = getData.slice (0, 24);
+        arrayOrder.sort(() => Math.random() - 0.5);
+        return arrayOrder;
+    } else if (hard === true) {
+        let arrayOrder = getData.slice (0, 36);
+        arrayOrder.sort(() => Math.random() - 0.5);
+        return arrayOrder;
+    }
 };
 
 // Function to generate cards into html page
+
 const cardGenerator = () => {
     const cardData = randomize();
     cardData.forEach(item => {
