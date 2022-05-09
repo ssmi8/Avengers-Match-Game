@@ -11,6 +11,7 @@ let winSound = new Audio('./assets/audio/tune.mp3');
 //Link 
 playerLivesCount.textContent = playerLives;
 
+
 // Generate card data for the game to work
 
 const getData = () => [
