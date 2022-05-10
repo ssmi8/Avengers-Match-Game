@@ -117,60 +117,86 @@ const randomize = () => {
 
 // Function to generate cards into html page
 
-const cardGenerator = () => {
-    const cardData = randomize();
-    cardData.forEach(item => {
-    const card = document.createElement ("div");
-    const face = document.createElement ("img");
-    const back = document.createElement ("img");
-    card.classList = 'card';
-    face.classList = 'face';
-    back.classList = 'back';
+
+let cardGenerator = () => {
+    let arrayOrder = randomize();
+
+
+    arrayOrder.forEach((element) => {
+        let card = document.createElement ("div");
+        let face = document.createElement ("img");
+        let back = document.createElement ("div");
+
+        card.classList.add ('card');
+        card.id = 'card';
+        face.classList.add('face');
+        back.classList.add('back');
+    
     //Image to card on html
-    face.src = item.imgSrc;
-    card.setAttribute("name", item.name);
+    face.src = element.imgSrc;
+    card.setAttribute("name", element.name);
+
     //Attach card to the section in html
-    section.appendChild(card);
+    game = document.getElementsByClassName("game");
+    game[0].appendChiled(card);
     card.appendChild(face);
     card.appendChild(back);
 
-    card.addEventListener('click', (e) => {
-        card.classList.toggle('commandCard');
-        cardCheck(e);
-    })
+    face.src = element.imagsrc;
+
+        card.addEventListener('click', (e) => {
+            startSound.play();
+            numberOfCards.push(element);
+            console.log(cardCheck[0]);
+            console.log(cardCheck[1]);
+            card.classList.add("correct");
+            card.classList.toggle('commandCard');
+            cardCheck(e);
+        });
     });
 };
 
 // Function to check if card match
+let numberOfCards = [];
+let flipCounter = [];
 const cardCheck = (e) => {
-    console.log(e);
-    const activeCard = e.target;
-    activeCard.classList.add("turned");
-    const turnedCards = document.querySelectorAll('.turned');
-    console.log(turnedCards);
-    // Matching logic
-if (turnedCards.length === 2) {
-    if (turnedCards[0].getAttribute("name") === turnedCards[1].getAttribute("name")
-    ) {
-        console.log("match");
-        turnedCards.forEach((card) => {
-            card.classList.remove("turned");
-            card.style.pointerEvents = "none";
-        });
-    } else {
-        console.log("wrong");
-        turnedCards.forEach((card) => {
-            card.classList.remove("turned");
-            setTimeout(() => card.classList.remove("commandCard"), 1500); //delay command to ensure second card can be clicked before first card turns
-        });
-        
-        playerLives--;
-        playerLivesCount.textContent = playerLives;
-        if (playerLives === 0) {
-            restart();
+
+    let targetCard = names.target;
+    let flipCard = document.querySelectorAll(".flipCard");
+
+    if (numberOfCards.length === 2) {
+
+        if (numberOfCards[0].name === numberOfCards[1].name) {
+            console.log("match");
+            incrementScore();
+            setTimeout(() => winSound.play(), 350);
+            flipCounter.push(1);
+            flipCard.forEach((card) => {
+                numberOfCards = [];
+                targetCard.classList.add("counter");
+            });
+            console.log(flipCounter)
+        } else {
+            console.log("wrong");
+            incrementScore();
+            flipCard.forEach((card) => {
+                setTimeout(() => card.classList.remove("flipCard"), 1000);
+                setTimeout(() => card.classList.remove("correct"), 1000);
+                numberOfCards = [];
+            });
         }
     }
-}
+
+    if (easy === true && flipCounter.length === 8) {
+        gameWin();
+    }
+    if (medium === true && flipCounter.length === 12) {
+        gameWin();
+    }
+    if (hard === true && flipCounter.length === 18) {
+        gameWin();
+    }
+    
 };
 
 // function for the restart of the game
