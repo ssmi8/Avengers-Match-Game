@@ -7,8 +7,8 @@
     font-family: 'Anton',  sans-serif;
 }
 
-html, body {
-    height: 100%;
+html {
+    min-height: 100vh;
 }
 
 body {
@@ -110,6 +110,10 @@ button:hover {
     box-shadow: rgb(139, 136, 136) 0px 5px 15px; /*Black shadow at bottom of each card with blur */ 
 }
 
+.card:hover {
+    color: blueviolet;
+}
+
 .easyLevel>.card {
     height: 9.375em;
     width: 9.375em;
@@ -141,7 +145,17 @@ button:hover {
     transform: rotateY(180deg); /*Rotate the images to the correct position*/
 }
 
-.commandCard {
+.moves {
+    font-size: 200%;
+    text-align: center;
+    color: purple;
+    background-color: whitesmoke;
+    border-radius: 1.25em;
+    width: 20em;
+    margin: auto;
+}
+
+.flipCard {
     transform: rotateY(180deg);
 }
 
@@ -154,6 +168,28 @@ button:hover {
 .filler {
     min-height: calc(100vh - 7.5em);
 }
+
+.result {
+    width: 30em;
+    padding: 0.625em;
+    margin: auto;
+    color: #FFFFFF;
+    background-color: rgb(80, 7, 80);
+    text-align: center;
+    transform: translate(0px, -22.5em);
+    border: 0.3125em rgb(0, 0, 0) solid;
+    background-size: contain;
+    z-index: 100;
+    font-size: 150%;
+}
+
+
+.result-message-hidden {
+    opacity: 0.0;
+    pointer-events: none;
+}
+
+
 
 .footer {
     color: #FFFFFF;

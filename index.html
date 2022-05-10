@@ -22,18 +22,20 @@
         <button data-type="submit" class="medium">Medium</button>
         <button data-type="submit" class="hard">Hard</button>
     </section>
+   
+   
     <!-- Game to start on easy -->
-    <section class="game" class="game-easy"></section>
+    <section class="game easyLevel"></section>
 
      <!-- This is the section for the number of moves left -->
     <section>
-        <p class="moves">Moves: <span id="score">5</span></p>
+        <p class="moves">Moves: <span id="score">0</span></p>
     </section>
     
     <!-- Message board - Outlines message for wins and losses - hidden until game ends -->
     <section class="result">
         <div class="result-message" class="result-message-hidden">
-            <div class="score-wrapper"> Congratulations! You completed the memory game in <span id="score"> 0</span> moves<br>
+            <div> Congratulations! You completed the Avengers Match game in <span id="score"> 0</span> moves<br>
             Your best score for <span id="difficulty-text">Easy</span> is <span id="previous-score"></span>
             </div>
             <button data-type="submit" class="restart">Play Again?</button>

@@ -1,24 +1,21 @@
+// Grab a couple of things
+const section = document.querySelector('game');
+const moves = document.querySelector("span");
+const movesNumber = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
-    rerarrangeCards();
-    cardGenerator();
-})
-
-// Audio
-let startSound = new Audio('./assets/audio/assemble.mp3');
-let loseSound = new Audio('./assets/audio/inevitable.mp3');
-let winSound = new Audio('./assets/audio/tune.mp3');
+// link text
+moves.textContent = movesNumber;
 
 var easy = true;
-var medium = true;
-var hard = true;
+var medium = false;
+var hard = false;
 var easyScore = 100;
 var mediumScore = 100;
 var hardScore = 100;
 
 let hiddenScore = 0;
 
-
+/* What happens when the Easy, Medium or Hard buttons are clicked */
 let easyButton = document.getElementsByClassName("easy");
 easyButton[0].addEventListener("click", () => {
     easy = true;
@@ -33,9 +30,9 @@ easyButton[0].addEventListener("click", () => {
     document.getElementById("difficulty-text").innerText = "Easy";
 });
 let mediumButton = document.getElementsByClassName("medium");
-easyButton[0].addEventListener("click", () => {
-    easy = false;
+mediumButton[0].addEventListener("click", () => {
     medium = true;
+    easy = false;
     hard = false;
     gameType = document.getElementsByClassName("game");
     gameType[0].classList.remove("easyLevel");
@@ -46,10 +43,10 @@ easyButton[0].addEventListener("click", () => {
     document.getElementById("difficulty-text").innerText = "Medium";
 });
 let hardButton = document.getElementsByClassName("hard");
-easyButton[0].addEventListener("click", () => {
+hardButton[0].addEventListener("click", () => {
+    hard = true;
     easy = false;
     medium = false;
-    hard = true;
     gameType = document.getElementsByClassName("game");
     gameType[0].classList.remove("easyLevel");
     gameType[0].classList.remove("mediumLevel");
@@ -78,6 +75,8 @@ const getData = () => [
     { imgSrc: "assets/images/thanos.png", name: "thanos" },
     { imgSrc: "assets/images/vision.png", name: "vision" },
     { imgSrc: "assets/images/wolverine.png", name: "wolverine" },
+    { imgSrc: "assets/images/ant_man.png", name: "ant_man" },
+    { imgSrc: "assets/images/wasp.png", name: "wasp" },
     { imgSrc: "assets/images/black_panther.png", name: "black panther" },
     { imgSrc: "assets/images/captain_america.png", name: "captain america" },
     { imgSrc: "assets/images/captain_marvel.png", name: "captain marvel" },
@@ -94,72 +93,69 @@ const getData = () => [
     { imgSrc: "assets/images/thanos.png", name: "thanos" },
     { imgSrc: "assets/images/vision.png", name: "vision" },
     { imgSrc: "assets/images/wolverine.png", name: "wolverine" },
+    { imgSrc: "assets/images/ant_man.png", name: "ant_man" },
+    { imgSrc: "assets/images/wasp.png", name: "wasp" },
 ];
 
 
 // Randomize all of the cards for each difficulty level
 
-const randomize = () => {
+//randomise
+let randomise = () => {
     if (easy === true) {
-        let arrayOrder = getData.slice (0, 16);
-        arrayOrder.sort(() => Math.random() - 0.5);
-        return arrayOrder;
+        let cardData = getData.slice(0,16);
+        cardData.sort(() => Math.random() - 0.5);
+        return cardData;
     } else if (medium === true) {
-        let arrayOrder = getData.slice (0, 24);
-        arrayOrder.sort(() => Math.random() - 0.5);
-        return arrayOrder;
+        let cardData = getData.slice(0, 24);
+        cardData.sort(() => Math.random() - 0.5);
+        return cardData;
     } else if (hard === true) {
-        let arrayOrder = getData.slice (0, 36);
-        arrayOrder.sort(() => Math.random() - 0.5);
-        return arrayOrder;
+        let cardData = getData.slice(0, 36);
+        cardData.sort(() => Math.random() - 0.5);
+        return cardData;
     }
 };
 
-// Function to generate cards into html page
-
-
 let cardGenerator = () => {
-    let arrayOrder = randomize();
+    let cardData = randomise();
 
+    cardData.forEach((item) => {
+        let card = document.createElement("div");
+        let face = document.createElement("img");
+        let back = document.createElement("div");
 
-    arrayOrder.forEach((element) => {
-        let card = document.createElement ("div");
-        let face = document.createElement ("img");
-        let back = document.createElement ("div");
+        card.classList.add("card");
+        card.id = "card";
+        face.classList.add("face");
+        back.classList.add("back");
 
-        card.classList.add ('card');
-        card.id = 'card';
-        face.classList.add('face');
-        back.classList.add('back');
-    
-    //Image to card on html
-    face.src = element.imgSrc;
-    card.setAttribute("name", element.name);
+        face.src = item.imgSrc;
+        card.setAttribute("name", item.name);
 
-    //Attach card to the section in html
-    game = document.getElementsByClassName("game");
-    game[0].appendChiled(card);
-    card.appendChild(face);
-    card.appendChild(back);
+        game = document.getElementsByClassName("game");
+        game[0].appendChild(card);
+        card.appendChild(face);
+        card.appendChild(back);
 
-    face.src = element.imagsrc;
+        face.src = item.imgSrc;
 
-        card.addEventListener('click', (e) => {
-            startSound.play();
+        card.addEventListener("click", (names) => {
             numberOfCards.push(element);
-            console.log(cardCheck[0]);
-            console.log(cardCheck[1]);
+            console.log(numberOfCards[0]);
+            console.log(numberOfCards[1]);
             card.classList.add("correct");
-            card.classList.toggle('commandCard');
-            cardCheck(e);
+            card.classList.toggle("flipCard");
+            checkForMatch(names);
+
         });
     });
 };
 
-// Function to check if card match
+
 let numberOfCards = [];
 let flipCounter = [];
-const cardCheck = (e) => {
+const checkForMatch = (names) => {
 
     let targetCard = names.target;
     let flipCard = document.querySelectorAll(".flipCard");
@@ -169,11 +165,12 @@ const cardCheck = (e) => {
         if (numberOfCards[0].name === numberOfCards[1].name) {
             console.log("match");
             incrementScore();
-            setTimeout(() => winSound.play(), 350);
+            setTimeout(() => matchSound.play(), 350);
             flipCounter.push(1);
             flipCard.forEach((card) => {
                 numberOfCards = [];
                 targetCard.classList.add("counter");
+                card.classList.remove("flipCard");
             });
             console.log(flipCounter)
         } else {
@@ -183,10 +180,12 @@ const cardCheck = (e) => {
                 setTimeout(() => card.classList.remove("flipCard"), 1000);
                 setTimeout(() => card.classList.remove("correct"), 1000);
                 numberOfCards = [];
+
+
             });
         }
     }
-
+    /* Checks for if the player has won. */
     if (easy === true && flipCounter.length === 8) {
         gameWin();
     }
@@ -196,31 +195,81 @@ const cardCheck = (e) => {
     if (hard === true && flipCounter.length === 18) {
         gameWin();
     }
+};
+/**
+ * Moves Counter - Increases the number of moves and inserts the number into two places on the page 
+ * where it is visible to the player.
+ */
+
+ function incrementScore() {
+    let totalScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++totalScore;
+    let incrementScore = parseInt(document.getElementById("total-score").innerText);
+    document.getElementById("total-score").innerText = ++incrementScore;
+    ++hiddenScore;
+}
+/**
+ * Game Win - When the if statements in the card checker trigger the gameWin, the div containing 
+ * the congratulations message becomes visable and interactable.
+ */
+
+let gameWin = () => {
+    winSound.play(), 1000;
+    win = document.getElementsByClassName("result");
+    win[0].classList.toggle("result-message-hidden");
+   
+    /* If statements update the users best score depending on the difficulty */
+
+    if (easy === true && hiddenScore < easyScore) {
+        document.getElementById("previous-score").innerText = hiddenScore;
+        easyScore = hiddenScore;
+    }
     
+    if (medium === true && hiddenScore < mediumScore) {
+        document.getElementById("previous-score").innerText = hiddenScore;
+        mediumScore = hiddenScore;
+    }
+
+    if (hard === true && hiddenScore < hardScore) {
+        document.getElementById("previous-score").innerText = hiddenScore;
+        hardScore = hiddenScore;
+    }
+    console.log("Win!");
 };
 
-// function for the restart of the game
-const restart = () => {
-    let cardData = randomize();
-    let face = document.querySelectorAll(".face");
-    let card = document.querySelectorAll(".card");
-    cardData.forEach((item, index) => {
-        card[index].classList.remove("commandCard");
+/**
+ * Restart Buttons - The "Play Again?" button and difficulty buttons are both used to start the game over.
+ * The difficulty buttons are kept seperate so as not to trigger the classlist.toggle which would
+ * otherwise make the Congratulations message appear on the screen.
+ */
 
-        setTimeout(() => {
-            card[index].style.pointerEvents = "all";
-            face[index].src = item.imgSrc;
-            card[index].setAttribute("name", item.name);
-        }, 1000);
+let button = document.getElementsByClassName("restart");
+button[0].addEventListener("click", function () {
+    restart();
+});
 
-
-    });
-    playerLives = 5;
-    playerLivesCount.textContent = playerLives;
+let restart = () => {
+    win[0].classList.toggle("congratulationsHidden");
+    const elements = document.getElementsByClassName("card");
+    while (elements.length > 0) {
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+    randomizedCards();
+    cardGenerator();
+    flipCounter = [];
+    hiddenScore = 0;
+    document.getElementById("total-score").innerText = 0;
+    document.getElementById("score").innerText = 0;
 };
 
-
-
-
-
-cardGenerator();
+let levelSelect = () => {
+    const elements = document.getElementsByClassName("card");
+    while (elements.length > 0) {
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+    randomizeCards();
+    cardGenerator();
+    flipCounter = [];
+    document.getElementById("total-score").innerText = 0;
+    document.getElementById("score").innerText = 0;
+};
