@@ -158,15 +158,15 @@ section {
         display: grid;
         grid-template-columns: repeat(4, 5rem);
         grid-template-rows:  repeat(4, 5rem);
-        grid-gap: 1rem;
+        grid-gap: 0.5rem;
         perspective: 800px;
         justify-content: center;
-        margin-left: 50px;
+        
     }
 
     .playerLivesCount {
         font-size: 115%;
-        margin-left: 100px;
+        
     }
 
     .logo {
@@ -176,10 +176,7 @@ section {
 
     .tagLine {
         font-size: 1rem;
-        margin-left: 30px;
+        
     }
 
-    footer {
-        margin-left: 10px;
-    }
 }
