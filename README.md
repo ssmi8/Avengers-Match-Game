@@ -67,7 +67,66 @@ Full development cycle as per below:
 - Chrome developer tools for responsiveness
 - Figma Wireframes tool
 
+## Testing
+
+This section provides details of testing performed during development. 
+
+
+Testing was done as each change was saved.
+
+- Within Gitpod I utilized the live server extension to see changes in real time.
+- Using google developer tools I checked the responsiveness when changing screen sizing and used the desktop and mobile filters
+- I used Chrome Developer tool to analyse and review what was going through the console with each change I made.
+- Upon pushing the code to github I ran the lighthouse reports for mobile and desktop.
+- Lastly I ran the code through validators to look for errors in html, css and javascript.
+
+## Errors
+
+(need to update)
+
+### Validator Testing
+
+* HTML
+    - No errors were returned when passing through the W3C Validator for all 3 HTML pages. [Report Here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fssmi8.github.io%2FFighting-for-Par%2F)
+* CSS
+    - No errors were returned when passing through the W3C CSS Validation Service - Jigsaw. [Report Here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fssmi8.github.io%2FFighting-for-Par%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 
 
+## Deployment
 
+* My site was deployed via GitHub using the following steps:
+    - GitHub repository, navigate to the settings tab.
+    - Select the pages link in the setting menu.
+    - Under the GitHub Pages from the source the section drop-down menu, select the master branch.
+    - One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - [Fighting for Par](https://ssmi8.github.io/Fighting-for-Par/)
+
+## Credits
+
+### Media
+
+* All my images were taken from the below
+    - Pexels website - [Pexels](https://www.pexels.com/)
+    - Pintrest website - [Pintrest](https://www.pintrest.co.uk)
+    - Comics Alliance website - [Comics Alliance](https://www.comicsalliance.com)
+    - Quora website - [Quora](https://www.quora.com)
+    - Gamesspot website - [Gamespot](https://www.comicvine.gamespot.com/)
+    - Marvel website - [Marvel](https://www.marvel.com)
+    
+
+
+* The social media icons were taken from Font Awesome - [Font Awesome](https://fontawesome.com/)
+* The favicon was created by using [favicon-generator](https://www.favicon-generator.org/).  Using an icon from Font Awesome, I was able to get the image file and tag code for the head of the HTML file.
+
+### Reference Material
+
+* I used W3 Schools as a reference point/tutorial for HTML and CSS.
+* I used CSS-Tricks for help on flexbox and other CSS styling.
+* The code to make the social media links was taken from the Code Institute Project - Love Running.
+
+### Acknowledgements
+
+I'd like to thank my mentor Rahul Lakhanpal for all of his help and support during this portfolio.  His guidance and advice has helpped drive me through this project and made it more enjoyable.
+I would also like to thank my fiance Priya, as she gave me a different perspective of the website and her honest opinion throughout the project.  Her feedback was useful from a user point of view.
