@@ -25,7 +25,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: purple
+    background-image: url(/assets/images/background.png);
+    /*Center and scale the image*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section {
@@ -42,6 +46,7 @@ section {
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: rotateY(0deg);
     box-shadow: rgb(0,0,0,0.2) 0px 5px 15px; /*shadow at bottom of each card with blur */ 
+    background-image: url(/assets/images/avengers_symbol.png);
 }
 
 .face,.back {
@@ -52,12 +57,23 @@ section {
 }
 
 .back {
-    background-color: aliceblue;
+    background-color: purple;
     backface-visibility: hidden;
 }
 
 .toggleCard {
     transform: rotateY(180deg);
+}
+
+.playerLivesCount {
+    font-size: 200%;
+    color: white;
+    text-align: center;
+    background-color: purple;
+    border-radius: 1.25em;
+    border-color: purple;
+    width: 20em;
+    margin-bottom: 1rem;
 }
 
 
