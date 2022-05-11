@@ -7,26 +7,6 @@
     font-family: 'Anton',  sans-serif;
 }
 
-html {
-    min-height: 100vh;
-}
-
-body {
-    background-image: url(/assets/images/background.png);
-    
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-/** styling for the logo in the header **/
-
-.header {
-    margin: 0.5em;
-}
-
 .logo, .tagLine {
     color: whitesmoke;
     width: 500px;
@@ -36,68 +16,22 @@ body {
 }
 
 .logo {
-    font-size: 50px;
+    font-size: 4rem;
 }
 
-.tagLine {
-    font-size: 30px;
-}
-
-.difficulty {
-    margin: auto;
-    width: fit-content;
-}
-
-button {
-    display: inline-block;
-    padding: 0 16px 5px;
-    margin: 0 2.5px;
-    border: 2.5px solid grey;
-    border-radius: 1.25em;
-    box-sizing: border-box;
-    color: purple;
-    background-color: whitesmoke;
-    text-align: center;
-    transition: all 0.2s;
-    font-size: larger;
-}
-
-button:hover {
-    background-color: darkgray;
-}
-
-/* grid box styling */
-
-.easyLevel {
-    display: grid;
-    grid-template-columns: repeat(4, 8rem);
-    grid-template-rows: repeat(4, 8rem);
+body {
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     flex-direction: column;
-    grid-gap: 2rem;
-    perspective: 800px;
+    background-color: purple
 }
 
-
-.mediumLevel {
+section {
     display: grid;
-    grid-template-columns: repeat(6, 8rem);
-    grid-template-rows: repeat(6, 8rem);
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    grid-gap: 2rem;
-    perspective: 800px;
-}
-
-.hardLevel {
-    display: grid;
-    grid-template-columns: repeat(6, 8rem);
-    grid-template-rows: repeat(6, 8rem);
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    grid-template-columns: repeat(4,8rem);
+    grid-template-rows:  repeat(4,8rem);
     grid-gap: 2rem;
     perspective: 800px;
 }
@@ -105,28 +39,9 @@ button:hover {
 .card {
     position: relative;
     transform-style: preserve-3d;
-    transition: all 2s ease;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: rotateY(0deg);
-    box-shadow: rgb(139, 136, 136) 0px 5px 15px; /*Black shadow at bottom of each card with blur */ 
-}
-
-.card:hover {
-    color: blueviolet;
-}
-
-.easyLevel>.card {
-    height: 9.375em;
-    width: 9.375em;
-}
-
-.mediumLevel>.card {
-    height: 6.25em;
-    width: 6.25em;
-}
-
-.hardLevel>.card {
-    height: 6.25em;
-    width: 6.25em;
+    box-shadow: rgb(0,0,0,0.2) 0px 5px 15px; /*shadow at bottom of each card with blur */ 
 }
 
 .face,.back {
@@ -137,58 +52,13 @@ button:hover {
 }
 
 .back {
-    background: rgb(104, 6, 104);
+    background-color: aliceblue;
     backface-visibility: hidden;
 }
 
-.face {
-    transform: rotateY(180deg); /*Rotate the images to the correct position*/
-}
-
-.moves {
-    font-size: 200%;
-    text-align: center;
-    color: purple;
-    background-color: whitesmoke;
-    border-radius: 1.25em;
-    width: 20em;
-    margin: auto;
-}
-
-.flipCard {
+.toggleCard {
     transform: rotateY(180deg);
 }
-
-
-.button:hover {
-    background: rgb(68, 66, 66);
-    text-decoration: none;
-}
-
-.filler {
-    min-height: calc(100vh - 7.5em);
-}
-
-.result {
-    width: 30em;
-    padding: 0.625em;
-    margin: auto;
-    color: #FFFFFF;
-    background-color: rgb(80, 7, 80);
-    text-align: center;
-    transform: translate(0px, -22.5em);
-    border: 0.3125em rgb(0, 0, 0) solid;
-    background-size: contain;
-    z-index: 100;
-    font-size: 150%;
-}
-
-
-.result-message-hidden {
-    opacity: 0.0;
-    pointer-events: none;
-}
-
 
 
 .footer {

@@ -4,52 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-
     <title>Avengers Memory Game</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header Section to outline the Game title and catchphrase and difficulty levels -->
-<section class="filler">
-    <section class="header">
-        <h1 class="logo">Marvel Avengers Match</h1>
-        <h2 class="tagLine">Avengers...Assemble!</h2>
-    </section>
-    <!-- This is the section for the difficulty level buttons -->
-    <section class="difficulty">
-        <button data-type="submit" class="easy">Easy</button>
-        <button data-type="submit" class="medium">Medium</button>
-        <button data-type="submit" class="hard">Hard</button>
-    </section>
-   
-   
-    <!-- Game to start on easy -->
-    <section class="game easyLevel"></section>
 
-     <!-- This is the section for the number of moves left -->
-    <section>
-        <p class="moves">Moves: <span id="score">0</span></p>
-    </section>
-    
-    <!-- Message board - Outlines message for wins and losses - hidden until game ends -->
-    <section class="result">
-        <div class="result-message" class="result-message-hidden">
-            <div> Congratulations! You completed the Avengers Match game in <span id="score"> 0</span> moves<br>
-            Your best score for <span id="difficulty-text">Easy</span> is <span id="previous-score"></span>
-            </div>
-            <button data-type="submit" class="restart">Play Again?</button>
-        </div>
-    </section>
-</section>
+<h1 class="logo">The Avengers Memory Game</h1>
+<h2 class= "tagLine">Avengers Assemble!</h2>
+<h1>Lives: <span class="playerLivesCount"></span></h1>
 
-    <!-- Game Area-->
-        
-    <section class="grid"></section>
+<section class="game"></section>
 
-            
 <footer class="footer">Copyright © Steven Smith 2022</footer>
-
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
