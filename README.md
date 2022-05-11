@@ -2,8 +2,25 @@
 
 ## Table of Contents
 
+* [Introduction](https://github.com/ssmi8/Avengers-Match-Game/#introduction)
+* [UX](https://github.com/ssmi8/Avengers-Match-Game/#ux)
+   - [Development Cycle](https://github.com/ssmi8/Avengers-Match-Game/#development-cycle)
+   - [Technologies Used](https://github.com/ssmi8/Avengers-Match-Game/#technologies-used)
+* [Testing](https://github.com/ssmi8/Avengers-Match-Game/#testing)
+   - [Errors](https://github.com/ssmi8/Avengers-Match-Game/#errors)
+   - [Validating Testing](https://github.com/ssmi8/Avengers-Match-Game/#validating-testing)
+* [Deployment](https://github.com/ssmi8/Avengers-Match-Game/#deployment)
+* [Future Improvements](https://github.com/ssmi8/Avengers-Match-Game/#future-improvements)
+* [Credits](https://github.com/ssmi8/Avengers-Match-Game/#credits)
+   - [Media](https://github.com/ssmi8/Avengers-Match-Game/#media)
+   - [Reference Material](https://github.com/ssmi8/Avengers-Match-Game/#reference-material)
+
+
 ## Introduction
-This project is a Marvael Avengers themed memory match game which incorporates themes from the Avengers End Game, but uses original comic pictures. The game was constructed with the intention of being a brain training tool to primarily strengthen memory. To differentiate from other memory match games an Avengers theme was incorporated to improve the users overall experience.
+
+<img src="assets/ux-files/amiresponsive.png" width="auto" height="auto">
+
+This project is a Marvel Avengers themed memory match game which incorporates themes from the Avengers End Game, but uses original comic pictures. The game was constructed with the intention of being a brain training tool to primarily strengthen memory. To differentiate from other memory match games an Avengers theme was incorporated to improve the users overall experience.
 
 ## UX
 By visiting this site, as a user I would like: 
@@ -34,7 +51,9 @@ The project development cycle main steps were as follows:
 5. Final project review and testing
 6. Final adjustments made
 
-(insert development cycle image)
+Functions for the main game were designed in the following order:
+
+<img src="assets/ux-files/dev_cycle.png" width="auto" height="auto">
 
 Full development cycle as per below:
 
@@ -79,10 +98,15 @@ Testing was done as each change was saved.
 - I used Chrome Developer tool to analyse and review what was going through the console with each change I made.
 - Upon pushing the code to github I ran the lighthouse reports for mobile and desktop.
 - Lastly I ran the code through validators to look for errors in html, css and javascript.
+- For each update to git hub, I use industry standard commits as best practice.
 
 ## Errors
 
-(need to update)
+A number of errors came up during this project which I had to tackle and learn more about in order to correct these errors.  The following issues were identified and corrected:
+
+1. The last card would not turn over if they user would win or lose the game.  This was rectified by insterting a setTimeout function which delayed the result() function so all cards were presented when winning the game, and the second selected card would show if the user lost.
+2. Upon deployment of my website, the background image was not showing and wasn't being identified.  This was an error in my code where it was not selecting the correcr folder and therefore not showing in the live site.
+3. While testing for reponsiveness using chrome dev tools it was noticed that the grid would hug the left hand side of the screen and on certain sizes overflow to the left, this was corrected by changing the size of the grid, as well as the font size of the titles.
 
 ### Validator Testing
 
@@ -90,6 +114,7 @@ Testing was done as each change was saved.
     - No errors were returned when passing through the W3C Validator for all 3 HTML pages. [Report Here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fssmi8.github.io%2FFighting-for-Par%2F)
 * CSS
     - No errors were returned when passing through the W3C CSS Validation Service - Jigsaw. [Report Here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fssmi8.github.io%2FFighting-for-Par%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* JShint
 
 
 
@@ -97,11 +122,24 @@ Testing was done as each change was saved.
 
 * My site was deployed via GitHub using the following steps:
     - GitHub repository, navigate to the settings tab.
+
+    <img src="assets/ux-files/deployment_1.png" width="auto" height="auto">
+
     - Select the pages link in the setting menu.
+
+    <img src="assets/ux-files/deployment_2.png" width="auto" height="auto">
+    
     - Under the GitHub Pages from the source the section drop-down menu, select the master branch.
+    
+    <img src="assets/ux-files/deployment_3.png" width="auto" height="auto">
+
     - One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here - [Fighting for Par](https://ssmi8.github.io/Fighting-for-Par/)
+The live link can be found here - [Avengers Memory Game](https://ssmi8.github.io/Avengers-Match-Game/)
+
+## Future Improvements
+
+Add difficulty levels to the the game to challenge users more and help improve their cognitive memory.  The user would specify the difficulty level and aim to beat their previous scores.
 
 ## Credits
 
@@ -116,9 +154,8 @@ The live link can be found here - [Fighting for Par](https://ssmi8.github.io/Fig
     - Marvel website - [Marvel](https://www.marvel.com)
 
 
-
-
 * The favicon was created by using [favicon-generator](https://www.favicon-generator.org/).  Using an image from the Marvel website, I was able to get the image file and tag code for the head of the HTML file.
+
 
 ### Reference Material
 
