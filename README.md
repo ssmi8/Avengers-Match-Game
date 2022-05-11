@@ -19,7 +19,7 @@ Initially used Figma to produce wireframes of how I wanted to the website to loo
 
 Landing Page
 
-(insert Fignma Wireframes)
+<img src="/assets/ux-files/memory-game-design.png" width="auto" height="auto">
 
 ## Development Cycle
 
