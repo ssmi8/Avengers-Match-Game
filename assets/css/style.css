@@ -116,22 +116,31 @@ section {
 @media (max-width: 900px) {
     section {
         display: grid;
-        grid-template-columns: repeat(4, 8rem);
-        grid-template-rows:  repeat(4, 8rem);
+        grid-template-columns: repeat(4, 6rem);
+        grid-template-rows:  repeat(4, 6rem);
         grid-gap: 1rem;
         perspective: 800px;
     }
 
     .playerLivesCount {
-        font-size: 175%;
+        font-size: 130%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        
+    }
+
+    .tagLine {
+        font-size: 1.2rem;
     }
 }    
 
 @media (max-width: 600px) {
     section {
         display: grid;
-        grid-template-columns: repeat(4, 5rem);
-        grid-template-rows:  repeat(4, 5rem);
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows:  repeat(4, 4rem);
         grid-gap: 1rem;
         perspective: 800px;
         justify-content: center;
@@ -156,8 +165,8 @@ section {
 @media (max-width: 400px) {
     section {
         display: grid;
-        grid-template-columns: repeat(4, 5rem);
-        grid-template-rows:  repeat(4, 5rem);
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows:  repeat(4, 4rem);
         grid-gap: 0.5rem;
         perspective: 800px;
         justify-content: center;
@@ -165,13 +174,13 @@ section {
     }
 
     .playerLivesCount {
-        font-size: 115%;
+        font-size: 80%;
+        margin-left: 120px;
         
     }
 
     .logo {
-        font-size: 1.2rem;
-        margin-left: 30px;
+        font-size: 1rem;
     }
 
     .tagLine {
