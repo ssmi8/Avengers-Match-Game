@@ -21,7 +21,7 @@
 
 <img src="assets/ux-files/amiresponsive.png" width="auto" height="auto">
 
-This project is a Marvel Avengers themed memory match game which incorporates themes from the Avengers End Game, but uses original comic pictures. The game was constructed with the intention of being a brain training tool to primarily strengthen memory. To differentiate from other memory match games an Avengers theme was incorporated to improve the users overall experience.
+This project is a Marvel Avengers themed memory match game which incorporates themes from the Avengers End Game film, but uses original comic pictures. The reasons behind these choices were to create a fun and intersting game, whilst introducing users to comic themes. The game was constructed with the intention of being a brain training tool to primarily strengthen memory. To differentiate from other memory match games an Avengers theme was incorporated to improve the users overall experience.
 
 ## UX
 By visiting this site, as a user I would like: 
@@ -31,16 +31,16 @@ By visiting this site, as a user I would like:
 - to enjoy and understand the theme of the game.
 - to play a brain training game whilst having a fun experience.
 
-The site was designed so that the user would land on the gaming page. This would allow the user to begin the game immediately and be able to test the memory.  The 
+The site was designed so that the user would land on the gaming page. This would allow the user to begin the game immediately and be able to test the memory.
 
 
-At design stage a initial colour scheme diagram was produced to indicate the Avengers End Game theme, which the user will recognise and be further enhances when playing the game and seeing the characters.  Originally, the designed incorporated the Avengers official logo, however the background did not match the theme, so was removed to enhance the user experience.
+At the design stage an initial colour scheme was produced to indicate the Avengers End Game film theme, which the user will recognise and be further enhanced by when playing the game and seeing the comic characters.  Originally, the designed incorporated the Avengers official logo, however the background did not match the theme, so was removed to enhance the user experience.
 
 A wireframe was constructed using figma wireframes.
 
 Initially used Figma to produce wireframes of how I wanted to the website to look. This enabled me to consider multiple layouts for the site before settling on a final design.
 
-Landing Page
+### Landing Page
 
 <img src="assets/ux-files/memory_game_design.png" width="auto" height="auto">
 
@@ -67,19 +67,19 @@ Full development cycle as per below:
 2. Create Wireframes
 3. Initial HTML, CSS and Javascript pages created
 4. Logo and tag line added to html
-5. footer added to html
-6. images found, size adjusted and added to assets folder
-7. create basic functions to pick up images in console
-8. add images to html page in javascript
-9. add flip function of the cards
-10. flip only two cards and check logic if card matches
-11. if match, card stays up facing, if not return back around
-12. add randomising function
-13. perform testing to make sure all running okay
+5. Footer added to html
+6. Images found, size adjusted and added to assets folder
+7. Create basic functions to pick up images in console
+8. Add images to html page in javascript
+9. Add flip function of the cards
+10. Flip only two cards and check logic if card matches
+11. If match, card stays up facing, if not return back around
+12. Add randomising function
+13. Perform testing to make sure all running okay
 14. Avengers theme backgrounded added
-15. message deployment for win or loss
-16. project review
-17. modifications added for different size screens
+15. Message deployment for win or loss
+16. Project review
+17. Modifications added for different size screens
 
 ## Technologies Used
 
@@ -102,7 +102,6 @@ Testing was done as each change was saved.
 - Within Gitpod I utilized the live server extension to see changes in real time.
 - Using google developer tools I checked the responsiveness when changing screen sizing and used the desktop and mobile filters
 - I used Chrome Developer tool to analyse and review what was going through the console with each change I made.
-- Upon pushing the code to github I ran the lighthouse reports for mobile and desktop.
 - Lastly I ran the code through validators to look for errors in html, css and javascript.
 - For each update to git hub, I use industry standard commits as best practice.
 
@@ -118,7 +117,7 @@ A number of errors came up during this project which I had to tackle and learn m
 
 * HTML
     - No errors but 1 warning was returned when passing through the W3C Validator.  This warning outlines a lack of a heading in the section where the game grid sits.
-     [Report Here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fssmi8.github.io%2FAvengers-Match-Game%2F)
+    [Report Here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fssmi8.github.io%2FAvengers-Match-Game%2F)
 * CSS
     - No errors were returned when passing through the W3C CSS Validation Service - Jigsaw. 
     [Report Here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fssmi8.github.io%2FAvengers-Match-Game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
@@ -142,7 +141,7 @@ Chrome DevTools were used extensively during development phase to assist in:
 
     <img src="assets/ux-files/deployment_1.png" width="auto" height="auto">
 
-    - Select the pages link in the setting menu.
+    - Select the pages link in the settings menu.
 
     <img src="assets/ux-files/deployment_2.png" width="auto" height="auto">
     
@@ -150,7 +149,7 @@ Chrome DevTools were used extensively during development phase to assist in:
     
     <img src="assets/ux-files/deployment_3.png" width="auto" height="auto">
 
-    - One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+    - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
 The live link can be found here - [Avengers Memory Game](https://ssmi8.github.io/Avengers-Match-Game/)
 
@@ -162,7 +161,7 @@ Add difficulty levels to the the game to challenge users more and help improve t
 
 ### Media
 
-* All my images were taken from the below
+* All my images were taken from the below:
 
     - Pintrest website - [Pintrest](https://www.pintrest.co.uk)
     - Comics Alliance website - [Comics Alliance](https://www.comicsalliance.com)
