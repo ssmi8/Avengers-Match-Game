@@ -108,25 +108,21 @@ The live link can be found here - [Fighting for Par](https://ssmi8.github.io/Fig
 ### Media
 
 * All my images were taken from the below
-    - Pexels website - [Pexels](https://www.pexels.com/)
+
     - Pintrest website - [Pintrest](https://www.pintrest.co.uk)
     - Comics Alliance website - [Comics Alliance](https://www.comicsalliance.com)
     - Quora website - [Quora](https://www.quora.com)
-    - Gamesspot website - [Gamespot](https://www.comicvine.gamespot.com/)
+    - Gamespot website - [Gamespot](https://www.comicvine.gamespot.com/)
     - Marvel website - [Marvel](https://www.marvel.com)
-    
 
 
-* The social media icons were taken from Font Awesome - [Font Awesome](https://fontawesome.com/)
-* The favicon was created by using [favicon-generator](https://www.favicon-generator.org/).  Using an icon from Font Awesome, I was able to get the image file and tag code for the head of the HTML file.
+
+
+* The favicon was created by using [favicon-generator](https://www.favicon-generator.org/).  Using an image from the Marvel website, I was able to get the image file and tag code for the head of the HTML file.
 
 ### Reference Material
 
-* I used W3 Schools as a reference point/tutorial for HTML and CSS.
+* I used W3 Schools as a reference point/tutorial for HTML, CSS and Javascript.
 * I used CSS-Tricks for help on flexbox and other CSS styling.
-* The code to make the social media links was taken from the Code Institute Project - Love Running.
+* I used youtube video tutorials to help with some examples of functionality.
 
-### Acknowledgements
-
-I'd like to thank my mentor Rahul Lakhanpal for all of his help and support during this portfolio.  His guidance and advice has helpped drive me through this project and made it more enjoyable.
-I would also like to thank my fiance Priya, as she gave me a different perspective of the website and her honest opinion throughout the project.  Her feedback was useful from a user point of view.

@@ -67,9 +67,9 @@ section {
 
 .playerLivesCount {
     font-size: 200%;
-    color: white;
+    color: purple;
     text-align: center;
-    background-color: purple;
+    background-color: white;
     border-radius: 1.25em;
     border-color: purple;
     width: 20em;
