@@ -9,6 +9,7 @@
 * [Testing](https://github.com/ssmi8/Avengers-Match-Game/#testing)
    - [Errors](https://github.com/ssmi8/Avengers-Match-Game/#errors)
    - [Validating Testing](https://github.com/ssmi8/Avengers-Match-Game/#validating-testing)
+   - [Chrome DevTools](https://github.com/ssmi8/Avengers-Match-Game/#chromedev-tools)
 * [Deployment](https://github.com/ssmi8/Avengers-Match-Game/#deployment)
 * [Future Improvements](https://github.com/ssmi8/Avengers-Match-Game/#future-improvements)
 * [Credits](https://github.com/ssmi8/Avengers-Match-Game/#credits)
@@ -116,11 +117,22 @@ A number of errors came up during this project which I had to tackle and learn m
 ### Validator Testing
 
 * HTML
-    - No errors were returned when passing through the W3C Validator for all 3 HTML pages. [Report Here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fssmi8.github.io%2FFighting-for-Par%2F)
+    - No errors but 1 warning was returned when passing through the W3C Validator.  This warning outlines a lack of a heading in the section where the game grid sits.
+     [Report Here](https://validator.w3.org/nu/?doc=https%3A%2F%2Fssmi8.github.io%2FAvengers-Match-Game%2F)
 * CSS
-    - No errors were returned when passing through the W3C CSS Validation Service - Jigsaw. [Report Here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fssmi8.github.io%2FFighting-for-Par%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    - No errors were returned when passing through the W3C CSS Validation Service - Jigsaw. 
+    [Report Here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fssmi8.github.io%2FAvengers-Match-Game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 * JShint
+    - There were warnings present when passing through the JShint site.
 
+### ChromeDev Tools
+
+Chrome DevTools were used extensively during development phase to assist in:
+
+* debugging
+* checking errors
+* issues in page layout
+* verifying correct output in the console
 
 
 ## Deployment

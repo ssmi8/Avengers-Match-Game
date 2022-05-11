@@ -1,4 +1,4 @@
-// Grab a couple of things
+
 const section = document.querySelector('section');
 const playerLivesCount = document.querySelector('span');
 let playerLives = 6;
@@ -38,8 +38,8 @@ const randomise = () => {
 
 const cardGenerator = () => {
     const cardData = randomise();
+
     // generate HTML
-    
     cardData.forEach(item => {
         const card = document.createElement("div");
         const face = document.createElement("img");
