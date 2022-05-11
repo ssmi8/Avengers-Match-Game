@@ -12,7 +12,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("../images/background.png");
+    background: url("../images/background.png") no-repeat center center fixed;
     /*Center and scale the image*/
     background-position: center;
     background-repeat: no-repeat;
@@ -96,14 +96,14 @@ section {
 @media (max-width: 1400px) {
     section {
         display: grid;
-        grid-template-columns: repeat(4, 6rem);
-        grid-template-rows:  repeat(4, 6rem);
+        grid-template-columns: repeat(4, 8rem);
+        grid-template-rows:  repeat(4, 8rem);
         grid-gap: 1rem;
         perspective: 800px;
     }
 
     .playerLivesCount {
-        font-size: 135%;
+        font-size: 175%;
     }
 
     .logo {
@@ -116,70 +116,70 @@ section {
 @media (max-width: 900px) {
     section {
         display: grid;
-        grid-template-columns: repeat(4, 7rem);
-        grid-template-rows:  repeat(4, 7rem);
+        grid-template-columns: repeat(4, 8rem);
+        grid-template-rows:  repeat(4, 8rem);
         grid-gap: 1rem;
         perspective: 800px;
     }
 
     .playerLivesCount {
-        font-size: 155%;
+        font-size: 175%;
     }
 }    
-
-@media (max-width: 750px) {
-    section {
-        display: grid;
-        grid-template-columns: repeat(4, 6rem);
-        grid-template-rows:  repeat(4, 6rem);
-        grid-gap: 1rem;
-        perspective: 800px;
-    }
-
-    .playerLivesCount {
-        font-size: 135%;
-    }
-
-}
 
 @media (max-width: 600px) {
     section {
         display: grid;
         grid-template-columns: repeat(4, 5rem);
         grid-template-rows:  repeat(4, 5rem);
-        grid-gap: 1.2rem;
+        grid-gap: 1rem;
         perspective: 800px;
+        justify-content: center;
         
     }
 
     .playerLivesCount {
-        font-size: 130%;
+        font-size: 110%;
+        margin-left: 80px;
     }
 
     .logo {
-        font-size: 3rem;
+        font-size: 1.5rem;
+        margin-left: 10px;
     }
 
+    .tagLine {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 400px) {
     section {
         display: grid;
-        grid-template-columns: repeat(4, 4rem);
-        grid-template-rows:  repeat(4, 4rem);
+        grid-template-columns: repeat(4, 5rem);
+        grid-template-rows:  repeat(4, 5rem);
         grid-gap: 1rem;
         perspective: 800px;
-        margin-left: 140px;
-    }
-
-    .playerLivesCount {
-        font-size: 95%;
-        margin-left: 140px;
-    }
-
-    .logo {
-        font-size: 2rem;
+        justify-content: center;
         margin-left: 50px;
     }
 
+    .playerLivesCount {
+        font-size: 115%;
+        margin-left: 100px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        margin-left: 30px;
+    }
+
+    .tagLine {
+        font-size: 1rem;
+        margin-left: 30px;
+    }
+
+    footer {
+        margin-left: 10px;
+    }
 }
