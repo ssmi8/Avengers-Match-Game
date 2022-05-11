@@ -8,7 +8,6 @@
 }
 
 html {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +29,13 @@ html {
 }
 
 .logo {
-    font-size: 4rem;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.tagLine {
+    font-size: 2rem;
+    letter-spacing: 3px;
 }
 
 section {
@@ -46,7 +51,7 @@ section {
     transform-style: preserve-3d;
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: rotateY(0deg);
-    box-shadow: rgb(0,0,0,0.2) 0px 5px 15px; /*shadow at bottom of each card with blur */ 
+    box-shadow: rgba(224, 203, 203, 0.2) 0px 5px 15px; /*shadow at bottom of each card with blur */ 
     background-image: url(/assets/images/avengers_symbol.png);
 }
 
@@ -67,7 +72,7 @@ section {
 }
 
 .playerLivesCount {
-    font-size: 200%;
+    font-size: 190%;
     color: purple;
     text-align: center;
     background-color: white;
@@ -88,17 +93,37 @@ section {
 
 /* Media device size queries */
 
+@media (max-width: 1400px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(4, 6rem);
+        grid-template-rows:  repeat(4, 6rem);
+        grid-gap: 1rem;
+        perspective: 800px;
+    }
+
+    .playerLivesCount {
+        font-size: 135%;
+    }
+
+    .logo {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+}
+
 @media (max-width: 900px) {
     section {
         display: grid;
         grid-template-columns: repeat(4, 7rem);
         grid-template-rows:  repeat(4, 7rem);
-        grid-gap: 2rem;
+        grid-gap: 1rem;
         perspective: 800px;
     }
 
     .playerLivesCount {
-        font-size: 170%;
+        font-size: 155%;
     }
 }    
 
@@ -107,12 +132,12 @@ section {
         display: grid;
         grid-template-columns: repeat(4, 6rem);
         grid-template-rows:  repeat(4, 6rem);
-        grid-gap: 2rem;
+        grid-gap: 1rem;
         perspective: 800px;
     }
 
     .playerLivesCount {
-        font-size: 150%;
+        font-size: 135%;
     }
 
 }
@@ -142,16 +167,19 @@ section {
         display: grid;
         grid-template-columns: repeat(4, 4rem);
         grid-template-rows:  repeat(4, 4rem);
-        grid-gap: 2rem;
+        grid-gap: 1rem;
         perspective: 800px;
+        margin-left: 140px;
     }
 
     .playerLivesCount {
-        font-size: 110%;
+        font-size: 95%;
+        margin-left: 140px;
     }
 
     .logo {
         font-size: 2rem;
+        margin-left: 50px;
     }
 
 }
