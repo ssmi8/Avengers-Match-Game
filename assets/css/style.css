@@ -7,6 +7,20 @@
     font-family: 'Anton',  sans-serif;
 }
 
+html {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/assets/images/background.png);
+    /*Center and scale the image*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .logo, .tagLine {
     color: whitesmoke;
     width: 500px;
@@ -17,19 +31,6 @@
 
 .logo {
     font-size: 4rem;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: url(/assets/images/background.png);
-    /*Center and scale the image*/
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 section {
@@ -85,3 +86,72 @@ section {
 }
 
 
+/* Media device size queries */
+
+@media (max-width: 900px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(4, 7rem);
+        grid-template-rows:  repeat(4, 7rem);
+        grid-gap: 2rem;
+        perspective: 800px;
+    }
+
+    .playerLivesCount {
+        font-size: 170%;
+    }
+}    
+
+@media (max-width: 750px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(4, 6rem);
+        grid-template-rows:  repeat(4, 6rem);
+        grid-gap: 2rem;
+        perspective: 800px;
+    }
+
+    .playerLivesCount {
+        font-size: 150%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(4, 5rem);
+        grid-template-rows:  repeat(4, 5rem);
+        grid-gap: 1.2rem;
+        perspective: 800px;
+        
+    }
+
+    .playerLivesCount {
+        font-size: 130%;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows:  repeat(4, 4rem);
+        grid-gap: 2rem;
+        perspective: 800px;
+    }
+
+    .playerLivesCount {
+        font-size: 110%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+}
