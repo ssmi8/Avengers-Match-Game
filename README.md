@@ -30,6 +30,11 @@ By visiting this site, as a user I would like:
 - to enjoy and understand the theme of the game.
 - to play a brain training game whilst having a fun experience.
 
+The site was designed so that the user would land on the gaming page. This would allow the user to begin the game immediately and be able to test the memory.  The 
+
+
+At design stage a initial colour scheme diagram was produced to indicate the Avengers End Game theme, which the user will recognise and be further enhances when playing the game and seeing the characters.  Originally, the designed incorporated the Avengers official logo, however the background did not match the theme, so was removed to enhance the user experience.
+
 A wireframe was constructed using figma wireframes.
 
 Initially used Figma to produce wireframes of how I wanted to the website to look. This enabled me to consider multiple layouts for the site before settling on a final design.
