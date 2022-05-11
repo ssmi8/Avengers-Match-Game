@@ -70,7 +70,7 @@ const checkCards = (e) => {
     const flippedCards = document.querySelectorAll('.flipped');
     const toggleCard = document.querySelectorAll('.toggleCard');
     console.log("flippedCards");
-    //add audio here
+    
     //logic for matching cards
     if (flippedCards.length === 2) {
         if (
@@ -91,13 +91,13 @@ const checkCards = (e) => {
             playerLives--;
             playerLivesCount.textContent = playerLives;
             if(playerLives === 0) {
-                restart("Bad luck! The Avengers were not assembled...try again");
+                setTimeout(() => restart("Bad luck! The Avengers were not assembled...try again"), 1000);
             }
         }
     }
     //Run a check to see if game is won
     if (toggleCard.length === 16) {
-        restart("Congratulations!  The Avengers....were assembled");
+        setTimeout(() => restart("Congratulations!  The Avengers....were assembled"), 1000);
     }
 };
 
